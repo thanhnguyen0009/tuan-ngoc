@@ -732,6 +732,15 @@ hr{
     letter-spacing: 1px;
     font-style: italic;
 }
+.lb-info8{
+    font-family: var(--font-gotham);
+    font-size: .55em;
+    margin-top: 10px;
+    color: var(--color-text);
+    text-align: right;
+    letter-spacing: 1px;
+    font-style: italic;
+}
 
 .sub8{
     font-style: italic;
