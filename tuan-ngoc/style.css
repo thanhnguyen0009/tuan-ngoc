@@ -725,16 +725,7 @@ hr{
 
 .lb-info8{
     font-family: var(--font-gotham);
-    font-size: .6em;
-    margin-top: 10px;
-    color: var(--color-text);
-    text-align: right;
-    letter-spacing: 1px;
-    font-style: italic;
-}
-.lb-info88{
-    font-family: var(--font-gotham);
-    font-size: .55em;
+    font-size: .5em;
     margin-top: 10px;
     color: var(--color-text);
     text-align: right;
