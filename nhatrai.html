@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Thông tin Open Graph cho ảnh đại diện -->
+    <meta property="og:image" content="https://yenstudio.com.vn/tuan-ngoc.jpg" />
+    <meta property="og:image:width" content="600" /> <!-- Chiều rộng ảnh đại diện -->
+    <meta property="og:image:height" content="300" /> <!-- Chiều cao ảnh đại diện -->
+
+    <!-- Các thông tin khác cho Open Graph -->
+    <meta property="og:title" content="TUẤN - NGỌC" />
+    <meta property="og:description" content="MINH TUẤN - KIM NGỌC" />
+    <!-- <meta property="og:url" content="https://yenstudio.com.vn/tuan-ngocthiepmoi.html" /> -->
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="./tuan-ngoc/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>MINH TUẤN - KIM NGỌC</title>
+    <style>
+        .popup {
+          position: fixed;
+          top: 20px;
+          right: 20px;
+          background-color: #4CAF50;
+          color: white;
+          padding: 12px 20px;
+          border-radius: 8px;
+          box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+          opacity: 0;
+          pointer-events: none;
+          transition: opacity 0.3s ease;
+          z-index: 1000;
+        }
+      
+        .popup.show {
+          opacity: 1;
+          pointer-events: auto;
+        }
+      </style>
+      
+</head>
+<body>
+    <div id="loading-container" class="loading-container">
+        <div class="spinner"></div>
+    </div>
+    <div class="container">
+        <div class="container-wrapper">
+            <div class="box-circle">
+                <div class="circle" id="musicCircle">
+                    <img src="./tuan-ngoc/anh/cd-02.png" alt="Music Icon" class="circle-image">
+                    <audio id="audio" src="./tuan-ngoc/audio/le-duong.mp3" loop></audio>
+                </div>
+                <label for="audio" class="lb-circle">No Music? <br> Click Me</label>
+            </div>
+            <div class="turn-top">
+                <a href="#box-top" class="turn"><i class="fa-solid fa-up-long"></i></a>
+            </div>
+            <div id="box-top">
+                <div class="box-frame">
+                    <img src="./tuan-ngoc/anh/save-03.png" alt="" class="img-save">
+                    <label for="" class="lb-top">TUẤN & NGỌC</label>
+                    <label for="" class="lb-top2">15.06.2025</label>
+                </div>
+
+                <label for="" class="dau">“</label>
+                <label for="" class="giua">Anh biết không cảm giác gặp được anh giống như <br>
+                    “Đi một đoạn đường xa cuối cùng cũng về đến nhà”</label>
+                    <label for="" class="giua2">Meeting you feels like returning home after a long <br>
+                        journey, inspiring a profound sense of belonging</label>
+                <label for="" class="dau">”</label>
+                <div class="box-btn">
+                    <a href="#xac-nhan" class="btn">XÁC NHẬN THAM DỰ <br> <span class="sub">RSVP</span></a>
+                    <a href="#thoigian-diadiem" class="btn">THỜI GIAN & ĐỊA ĐIỂM <br> <span class="sub">Date & Time</span></a>
+                    <a href="#anh-cuoi" class="btn">ẢNH CƯỚI  <br> <span class="sub">Photo</span></a>
+                    <a href="#mung-cuoi" class="btn">MỪNG CƯỚI  <br> <span class="sub">Gift</span></a>
+                </div>
+            </div>
+            <div id="anh-cuoi">
+                <label for="" class="lb-anh1">Chú Rể & Cô Dâu   <br> <span class="sub2">GROOM AND BRIDE</span></label>
+                <div class="box-info">
+                   
+                    <div class="info2">
+                        <img src="./tuan-ngoc/anh/anh-03.png" alt="" class="img-info">
+                        <label for="" class="lb-info1">Minh Tuấn</label>
+                        <hr>
+                       <!-- BOX ICON 2 -->
+                       <div class="box-icon">
+                        <a href="https://www.facebook.com/profile.php?id=100029732589546" class="icon" target="_blank">
+                          <img src="./tuan-ngoc/anh/fb-03.png" alt="Facebook" class="img-icon">
+                        </a>
+                        <button class="open-btn" data-modal="modalZl2">
+                          <img src="./tuan-ngoc/anh/zl-03.png" alt="Zalo" class="img-icon">
+                        </button>
+                        <button class="open-btn" data-modal="modalPhone2">
+                          <img src="./tuan-ngoc/anh/phone-03.png" alt="Phone" class="img-icon">
+                        </button>
+                      </div>
+                        <label for="" class="lb-info2">Con bà: <strong>Maria Trần Thị Bích Nga</strong> <br>
+                            Con ông: <strong>Mark Michael Frederick Pardue</strong> <br>
+                             <span class="sub3">Mrs. Maria Nga Bich Thi Tran <br>
+                                Mr. Mark Michael Frederick Pardue</span></label>
+                        <label for="" class="lb-info22">15912 Donald Curtis Dr, <br>
+                            Woodbridge VA, 22191, U.S.A <br>
+                        <span class="sub3">15912 Donald Curtis Dr, <br>
+                            Woodbridge, VA, 2219</span></label>
+                    </div>
+                    <div class="info1">
+                        <img src="./tuan-ngoc/anh/anh-03.png" alt="" class="img-info">
+                        <label for="" class="lb-info1">Kim Ngọc</label>
+                        <hr>
+                        <!-- BOX ICON 1 -->
+                        <div class="box-icon">
+                            <a href="https://www.facebook.com/lkng.wabisabi" class="icon" target="_blank">
+                            <img src="./tuan-ngoc/anh/fb-03.png" alt="Facebook" class="img-icon">
+                            </a>
+                            <button class="open-btn" data-modal="modalZl1">
+                            <img src="./tuan-ngoc/anh/zl-03.png" alt="Zalo" class="img-icon">
+                            </button>
+                            <button class="open-btn" data-modal="modalPhone1">
+                            <img src="./tuan-ngoc/anh/phone-03.png" alt="Phone" class="img-icon">
+                            </button>
+                        </div>
+                        <label for="" class="lb-info2">Con ông: <strong>Lục Phi Dũng</strong> <br>
+                            Con bà: <strong>Phạm Kim Liên</strong> <br>
+                        <span class="sub3">
+                            Mr. Dung Phi Luc  <br>
+                            Mrs. Lien Kim Pham
+                        </span></label>
+                        <label for="" class="lb-info22">36A, Đường 183, Ấp 1, Xã Bình Mỹ, <br>
+                            H. Củ Chi, TP. Hồ Chí Minh <br>
+                        <span class="sub3">
+                            36A, Street No.183, Quarter 1, X.Bình Mỹ, <br>
+                            H.Củ Chi, Hồ Chí Minh, Ho Chi Minh City, 70000
+                        </span></label>
+                    </div>
+                </div>
+                    <!-- ========== 6 MODALS ========== -->
+                            <!-- Facebook Modal 1 -->
+                            <div id="modalFb1" class="modal-overlay">
+                                <div class="modal">
+                                <h2>Facebook liên hệ</h2>
+                                <div class="noi-dung">
+                                    <p id="text-fb1">facebook.com/box1</p>
+                                    <button class="copy" onclick="copyText('text-fb1')">Copy</button>
+                                </div>
+                                <button class="closeModal">Close</button>
+                                </div>
+                            </div>
+                            
+                            <!-- Zalo Modal 1 -->
+                            <div id="modalZl1" class="modal-overlay">
+                                <div class="modal">
+                                <h2>Zalo liên hệ</h2>
+                                <div class="noi-dung">
+                                    <p id="text-zl1">0879294977</p>
+                                    <button class="copy" onclick="copyText('text-zl1')">Copy</button>
+                                </div>
+                                <button class="closeModal">Close</button>
+                                </div>
+                            </div>
+                            
+                            <!-- Phone Modal 1 -->
+                            <div id="modalPhone1" class="modal-overlay">
+                                <div class="modal">
+                                <h2>Số điện thoại</h2>
+                                <div class="noi-dung">
+                                    <p id="text-phone1">0879294977</p>
+                                    <button class="copy" onclick="copyText('text-phone1')">Copy</button>
+                                </div>
+                                <button class="closeModal">Close</button>
+                                </div>
+                            </div>
+                            
+                            <!-- Facebook Modal 2 -->
+                            <div id="modalFb2" class="modal-overlay">
+                                <div class="modal">
+                                <h2>Facebook liên hệ</h2>
+                                <div class="noi-dung">
+                                    <p id="text-fb2">facebook.com/box2</p>
+                                    <button class="copy" onclick="copyText('text-fb2')">Copy</button>
+                                </div>
+                                <button class="closeModal">Close</button>
+                                </div>
+                            </div>
+                            
+                            <!-- Zalo Modal 2 -->
+                            <div id="modalZl2" class="modal-overlay">
+                                <div class="modal">
+                                <h2>Zalo liên hệ</h2>
+                                <div class="noi-dung">
+                                    <p id="text-zl2">0877748797</p>
+                                    <button class="copy" onclick="copyText('text-zl2')">Copy</button>
+                                </div>
+                                <button class="closeModal">Close</button>
+                                </div>
+                            </div>
+                            
+                            <!-- Phone Modal 2 -->
+                            <div id="modalPhone2" class="modal-overlay">
+                                <div class="modal">
+                                <h2>Số điện thoại</h2>
+                                <div class="noi-dung">
+                                    <p id="text-phone2">0877748797</p>
+                                    <button class="copy" onclick="copyText('text-phone2')">Copy</button>
+                                </div>
+                                <button class="closeModal">Close</button>
+                                </div>
+                            </div>
+                            
+                            <!-- SUCCESS POPUP -->
+                            <div id="popup-success" class="popup">✅ Đã copy!</div>
+                <div class="box-info2">
+                    <label for="" class="lb-info3">TRÂN TRỌNG BÁO TIN <strong>LỄ HÔN PHỐI</strong> CỦA CHÚNG TÔI: <br> 
+                        <span class="sub4">Wedding Ceremony:</span></label>
+                    <label for="" class="lb-info4">Giuse Nguyễn Minh Tuấn &</label>
+                    <label for="" class="lb-info5">Joseph Tuan Minh Nguyen & Margarita Ngoc Kim Luc<br> <span class="sub5">TRƯỞNG NAM & TRƯỞNG NỮ</span></label>
+                    <label for="" class="lb-info4">Margarita Lục Kim Ngọc</label>                               
+                </div>
+                <div class="box-info3">
+                    <label for="" class="lb-info6">HÔN LỄ ĐƯỢC CỬ HÀNH TẠI: <br>
+                    <span class="sub6">Location:</span></label>
+                    <label for="" class="lb-info7">GIÁO XỨ CHÁNH TÒA PHÚ CƯỜNG <br>
+                    <span class="sub7">Phu Cuong Cathedral Parish</span></label>
+                    <label for="" class="lb-info8">394 Đường CMT8, P. Phú Cường, TP. Thủ Dầu Một, Tỉnh Bình Dương <br>
+                    <span class="sub8">No. 394 Cach Mang Thang 8 Street, Phu Cuong Ward, <br>
+                        Thu Dau Molt City, Binh Duong Province, Vietnam, 590008</span></label>
+                </div>
+                <div class="box-info4">
+                    <label for="" class="lb-info9">VÀO LÚC <strong>15 GIỜ 00, THỨ BẢY</strong> <br>
+                    <span class="sub9">Time: 03:00 P.M | Saturday</span></label>
+                    <label for="" class="lb-info10">NGÀY 14 | THÁNG 06 | NĂM 2025 <br>
+                    <span class="sub10">Date: June 14, 2025</span></label>
+                    <label for="" class="lb-info11">Nhằm ngày 21 tháng 05 năm Ất Tỵ</label>
+                </div>
+            </div>
+
+            <div id="thoigian-diadiem">
+                <label for="" class="lb-time1">TRÂN TRỌNG KÍNH MỜI QUÝ KHÁCH <br>
+                    ĐẾN DỰ BUỔI TIỆC CHUNG VUI CÙNG GIA ĐÌNH CHÚNG TÔI TẠI <br>
+                <span class="sub11">Wedding Reception</span></label>
+                <img src="./tuan-ngoc/anh/flow1-03.png" alt="" class="img-time1">
+                <label for="" class="lb-time2">Pavillon Tân Sơn Nhất</label>
+                <label for="" class="lb-time3"><strong>TRUNG TÂM HỘI NGHỊ - TIỆC CƯỚI TÂN SƠN NHẤT PAVILLON<br>
+                    SẢNH AMBER – TẦNG 4 <br> </strong></label>
+                <label for="" class="lb-time33">202 Hoàng Văn Thụ, P. 9, Q. Phú Nhuận, Thành phố Hồ Chí Minh.</label>
+                <label for="" class="lb-sub"><strong>Pavillon Tan Son Nhat Wedding and Convention Cente <br> </strong>
+                    202 Hoang Van Thu, Ward 9, Phu Nhuan District, Ho Chi Minh City, 70000 r</label>
+                <a href="https://maps.app.goo.gl/2iJRxgFt595vtoRf9" class="btn-time" target="_blank">XEM BẢN ĐỒ | MAPS</a>
+                <img src="./tuan-ngoc/anh/flow2-03.png" alt="" class="img-time2">
+                <label for="" class="lb-time4">Lịch cưới của chúng mình <br>
+                <span class="sub12">CALENDAR</span></label>
+                <label for="" class="lb-time5">THÁNG 06, 2025 <br> <span class="sub13">June, 2025</span></label>
+                <img src="./tuan-ngoc/anh/lich-nhatrai-03.png" alt="" class="img-time3">
+                <label for="" class="lb-time6"><span class="black">VÀO LÚC: </span><span class="red"><strong>18 GIỜ 00 | CHỦ NHẬT</strong></span> <br>
+                <span class="sub14">Time: 06:00 PM | Sunday</span></label>
+                <label for="" class="lb-time7">NGÀY 22 | THÁNG 06 | NĂM 2025 <br> <span class="sub15">June 22, 2025</span></label>
+                <label for="" class="lb-time8">Đón khách: 18h00 | Khai tiệc: 19h00</label>
+
+                <div class="container-count">
+                    <div id="countdown">
+                      <ul>
+                        <li><span id="days"></span>DAYS</li>
+                        <li><span id="hours"></span>TIME</li>
+                        <li><span id="minutes"></span>MINUTE</li>
+                        <li><span id="seconds"></span>SEC</li>
+                      </ul>
+                    </div>
+                </div>
+                <img src="./tuan-ngoc/anh/flow3-03.png" alt="" class="img-time5">
+            </div>
+
+
+
+         
+            <div id="xac-nhan">
+                <form action="" name="tuan-ngoc">
+                    <div class="box-flow">
+                        <img src="./tuan-ngoc/anh/no-02.png" alt="" class="img-flow3">
+                    </div>
+                    <div class="feed-info">
+                        <label class="lb-thamdu">Xác nhận tham dự <br> <span class="sub16">RSVP</span></label>
+                        <img src="./tuan-ngoc/anh/flow2-03.png" alt="" class="img-form">
+                        <label for="" class="in-fe">KHÁCH MỜI VUI LÒNG XÁC NHẬN THAM DỰ TRƯỚC NGÀY 15.05 <br>
+                            ĐỂ CHÚNG TÔI CÓ THỂ CHUẨN BỊ CHU ĐÁO NHẤT</label>
+                            <label for="" class="in-fe2">Confirming attendance at the party before May 15. <br>
+                                This helps us to host you more thoungtfully and fully. Thank you!!!</label>
+                        <hr claass="hr-form">
+                    </div>
+                    <div class="box-label">
+                        <label for="" class="lb">BẠN SẼ ĐẾN CHUNG VUI CÙNG CÔ DÂU CHÚ RỂ CHỨ? <br> <span class="sub-til">Will you be attending the wedding?</span></label>
+                    </div>
+                    <div class="container-check">
+                        <input class="box-feed" type="radio" value="CÓ" id="yes" name="XÁC NHẬN">
+                        <label class="check-box" for="yes">
+                            <h3 class="til-check">CÓ/YES</h3>
+                        </label>
+                        <input class="box-feed" type="radio" value="KHÔNG" id="no" name="XÁC NHẬN">
+                        <label class="check-box" for="no"> 
+                            <h3 class="til-check">KHÔNG THAM DU</h3>
+                        </label>
+                    </div>
+
+                    <div class="box-label">
+                        <label for="" class="lb">BẠN LÀ KHÁCH MỜI CỦA?  <br> <span class="sub-til">Are you a guest of?</span></label>
+                    </div>
+                    <div class="container-check">
+                        <input class="box-feed" type="radio" value="CÔ DÂU" id="groom" name="BẠN CỦA CÔ DÂU/CHÚ RỂ">
+                        <label class="check-box" for="groom">
+                            <h3 class="til-check">CÔ DÂU</h3>
+                        </label>
+                        <input class="box-feed" type="radio" value="CHÚ RỂ" id="bride" name="BẠN CỦA CÔ DÂU/CHÚ RỂ">
+                        <label class="check-box" for="bride"> 
+                            <h3 class="til-check">CHÚ RỂ</h3>
+                        </label>
+                    </div>
+                    
+                    <div class="box-ten">
+                        <!-- <input required class="inp-ten" type="text"  name="TÊN KHÁCH MỜI" placeholder="Tên khách mời"> -->
+                        <textarea 
+                            required 
+                            id="inp-ten" 
+                            name="SỐ KHÁCH ĐI KÈM" 
+                            placeholder="BẠN DỰ ĐỊNH ĐI CÙNG VỚI BAO NHIÊU NGƯỜI?
+                            Which events will you be attending? (Nuptial Ceremony/ Wedding Reception/ Both)" 
+                            minlength="0" 
+                            maxlength="1" 
+                            oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 2);"></textarea>
+
+                    </div>
+                    <div class="box-ten">
+                        <textarea id="loi-chuc" name="LỜI CHÚC" rows="4" cols="50" 
+                        placeholder="BẠN CÓ LỜI CHÚC HAY NHẮN GỬI GÌ ĐẾN CÔ DÂU CHÚ RỂ KHÔNG?
+                        Do you have any wishes or messages for the Bride and Groom?"></textarea>
+                    </div>
+                    <div class="wrapper">
+                        <button class="xacnhan" type="submit">XÁC NHẬN/CONFIRM</button>
+                    </div>
+                </form>
+            </div>
+
+
+            <div id="mung-cuoi" >
+                <img src="./tuan-ngoc/anh/flow1-03.png" alt="" class="img-end1">
+                <label for="" class="lb-endd1" >QUÉT MÃ QR CODE DƯỚI ĐÂY <br>
+                    ĐỂ GỬI QUÀ MỪNG CƯỚI DÀNH TẶNG <strong>TUẤN VÀ NGỌC</strong> NHÉ! <br> <br>
+                <span class="sub-end1">Scan the QR Code below to send wedding gifts <br>
+                    to the Bride and Groom!</span></label>
+                    <img src="./tuan-ngoc/anh/qr-nhatrai-03.png" alt="" class="img-qr">
+                <!-- <button id="openModal" class="open-btn"><img src="./tuan-ngoc/anh/mungcuoi-02.png" alt="" class="img-qr"></button> -->
+                <label for="" class="thank">Thank you!</label>
+                <label for="" class="lb-end1">Cảm ơn bạn đã phản hồi! <br>
+                        <br>
+                    Sự hiện diện của bạn là niềm vinh hạnh cho gia đình chúng tôi. <br>
+                    Nếu kế hoạch của bạn có thay đổi gần ngày cưới, vui lòng cập nhật lại thông tin <br>
+                    trên website này khi cần thiết.</label>
+
+                    <label for="" class="lb-end3">Thank you for your RSVP! Your presence means a lot to us. <br>
+                        Please feel free to update your RSVP if your plans change before the wedding date.</label>
+                        
+                    <label for="" class="lb-end3">In case of any unexpected changes, <br>
+                        please contact the Bride and Groom at the following phone number: <strong>0879.294.977</strong></label>
+
+                <label for="" class="lb-end2">Trong trường hợp có thay đổi bất ngờ, <br>
+                    vui lòng liên hệ với cô dâu và chú rể qua số điện thoại sau: <span class="red">0879.294.977</span></label>
+
+               
+                    
+                <label for="" class="lb-end">YÊN STUDIO | YÊN BỀ GIA THẤT</label> 
+
+               
+
+            </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+
+    <script>
+        window.onload = function() {
+    // Lấy tất cả các phần tử cho các hiệu ứng fade-down, fade-up, fade-right, fade-left, zoom-in
+    const fadeDownElements = document.querySelectorAll('.box-info2, .box-info4, .lb-time1, .lb-time2, .lb-time3, .lb-time33, .lb-time4');  // Các phần tử fade-down
+    const fadeUpElements = document.querySelectorAll('.box-info3, .lb2-p2, .lb3-p2, .lb4-p3, .lb-sub, .lb5-p3, .in-fe, .container-check, .inp-ten, .lb-text, #loi-chuc');    // Các phần tử fade-up
+    const fadeRightElements = document.querySelectorAll('.info2');                               // Các phần tử fade-right
+    const fadeLeftElements = document.querySelectorAll('.info1');                                // Các phần tử fade-left
+    const zoomInElements = document.querySelectorAll('.img-timeline, .xacnhan, .img-maps');                // Các phần tử zoom-in
+
+    // Cấu hình của IntersectionObserver
+    const options = {
+        root: null, // Theo mặc định là viewport
+        threshold: 0.5 // Kích hoạt khi 50% phần tử hiển thị trong viewport
+    };
+
+    // Tạo đối tượng IntersectionObserver để theo dõi sự xuất hiện và mất đi của phần tử
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Nếu phần tử xuất hiện trong viewport, thêm lớp "visible"
+                entry.target.classList.add('visible');
+            } else {
+                // Nếu phần tử không còn trong viewport, xóa lớp "visible"
+                entry.target.classList.remove('visible');
+            }
+        });
+    }, options);
+
+    // Quan sát các phần tử theo từng hiệu ứng
+    fadeDownElements.forEach(element => observer.observe(element));
+    fadeUpElements.forEach(element => observer.observe(element));
+    fadeRightElements.forEach(element => observer.observe(element));
+    fadeLeftElements.forEach(element => observer.observe(element));
+    zoomInElements.forEach(element => observer.observe(element));
+};
+
+    </script>
+    <script>
+        const main = () => {
+  const second = 1000;
+  const minute = second * 60;
+  const hour = minute * 60;
+  const day = hour * 24;
+
+  // INSERT EVENT DATE AND TIME HERE IN THIS FORMAT: 'June 1, 2023, 19:00:00'
+  const EVENTDATE = new Date('June 15, 2025, 19:00:00');
+
+  const countDown = new Date(EVENTDATE).getTime();
+  const x = setInterval(() => {
+    const now = new Date().getTime();
+    const distance = countDown - now;
+
+    // Kiểm tra nếu thời gian đã đến hoặc qua ngày sự kiện
+    if (distance <= 0) {
+      clearInterval(x); // Dừng interval
+      // Đặt các giá trị về 0
+      document.getElementById("days").innerText = 0;
+      document.getElementById("hours").innerText = 0;
+      document.getElementById("minutes").innerText = 0;
+      document.getElementById("seconds").innerText = 0;
+      return; // Thoát khỏi hàm setInterval
+    }
+
+    // Cập nhật giá trị đếm ngược
+    document.getElementById("days").innerText = Math.floor(distance / day);
+    document.getElementById("hours").innerText = Math.floor((distance % day) / hour);
+    document.getElementById("minutes").innerText = Math.floor((distance % hour) / minute);
+    document.getElementById("seconds").innerText = Math.floor((distance % minute) / second);
+  }, 1000); // Cập nhật mỗi giây (1000ms thay vì 0 để tránh tải nặng)
+};
+
+main();
+    </script>
+
+<script>
+       const scriptURL = 'https://script.google.com/macros/s/AKfycbzlIoiSz34xa9lxmXfhWGBA0ZdOoVIJKKrfVniuWrs08pWfFwPhxKluIqKBZxJjAKin/exec';
+        const form = document.forms['tuan-ngoc'];
+
+        form.addEventListener('submit', e => {
+            e.preventDefault(); // Ngừng việc gửi form mặc định
+
+            document.getElementById('loading-container').style.display = 'flex';
+
+            // Gửi dữ liệu form đi
+            fetch(scriptURL, {
+                method: 'POST',
+                body: new FormData(form)
+            })
+                .then(response => {
+                    if (response.ok) {
+                        // Nếu dữ liệu gửi thành công, làm mới lại form
+                        form.reset(); // Làm mới lại form
+
+                        document.getElementById('loading-container').style.display = 'none';
+
+                        Swal.fire({
+                            title: 'Thành công',
+                            text: 'Cảm ơn bạn đã gửi phản hồi, thông tin đã được gửi đến dâu rể rồi nhaa <3',
+                            imageWidth: 300,
+                            imageHeight: 200,
+                            confirmButtonText: 'ĐÓNG',
+                            background: '#f8f8f8',
+                            padding: '20px',
+                            customClass: {
+                                popup: 'custom-popup',
+                                title: 'custom-title',
+                                confirmButton: 'custom-confirm-button'
+                            },
+                            didOpen: () => {
+                                document.querySelector('.swal2-popup').style.borderRadius = '10px'; // Bo tròn các góc
+                            }
+                        });
+                    } else {
+                        // Nếu gặp lỗi khi gửi dữ liệu
+                        console.error('Error!', response);
+
+                        document.getElementById('loading-container').style.display = 'none';
+
+                        Swal.fire({
+                            title: 'Oops!',
+                            text: 'Lỗi mất rồi thử lại giúp chúng mình nhé',
+                            icon: 'error',
+                            confirmButtonText: 'OK'
+                        });
+                    }
+                })
+                .catch(error => {
+                    // Xử lý lỗi nếu có
+                    console.error('Error!', error.message);
+
+                    document.getElementById('loading-container').style.display = 'none';
+
+                    Swal.fire({
+                        title: 'Oops!',
+                        text: 'Lỗi mất rồi thử lại giúp chúng mình nhé',
+                        icon: 'error',
+                        confirmButtonText: 'OK'
+                    });
+                });
+        });
+</script>
+<script>
+    // Mở modal theo data-modal
+    document.querySelectorAll(".open-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const modalId = btn.getAttribute("data-modal");
+        document.getElementById(modalId).style.display = "flex";
+      });
+    });
+  
+    // Đóng modal
+    document.querySelectorAll(".closeModal").forEach(btn => {
+      btn.addEventListener("click", () => {
+        btn.closest(".modal-overlay").style.display = "none";
+      });
+    });
+  
+    // Đóng modal khi click ngoài khung
+    document.querySelectorAll(".modal-overlay").forEach(overlay => {
+      overlay.addEventListener("click", e => {
+        if (e.target === overlay) {
+          overlay.style.display = "none";
+        }
+      });
+    });
+  
+    // Copy text vào clipboard
+    function copyText(id) {
+      const text = document.getElementById(id).innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        showPopup();
+      });
+    }
+  
+    // Hiện popup thành công
+    function copyText(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    showPopup(); // Hiện thông báo
+  });
+}
+
+function showPopup() {
+  const popup = document.getElementById("popup-success");
+  popup.classList.add("show");
+  setTimeout(() => {
+    popup.classList.remove("show");
+  }, 2000); // 2 giây ẩn đi
+}
+  </script>
+<script>
+    "use strict";
+     // Select all slides
+     const slides = document.querySelectorAll(".slide");
+
+     // Loop through slides và thiết lập translateX cho mỗi slide
+     slides.forEach((slide, indx) => {
+     slide.style.transform = `translateX(${indx * 100}%)`;
+     });
+
+     // Chọn nút next và prev
+     const nextSlide = document.querySelector(".btn-next");
+     const prevSlide = document.querySelector(".btn-prev");
+
+     // Biến đếm số slide hiện tại và tối đa
+     let curSlide = 0;
+     let maxSlide = slides.length - 1;
+
+     // Thêm sự kiện cho nút tiếp theo
+     nextSlide.addEventListener("click", function () {
+     // Nếu hiện tại là slide cuối, quay lại đầu tiên
+     if (curSlide === maxSlide) {
+         curSlide = 0;
+     } else {
+         curSlide++;
+     }
+
+     // Di chuyển tất cả các slide
+     slides.forEach((slide, indx) => {
+         slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+     });
+     });
+
+     // Thêm sự kiện cho nút quay lại
+     prevSlide.addEventListener("click", function () {
+     // Nếu hiện tại là slide đầu tiên, quay lại cuối cùng
+     if (curSlide === 0) {
+         curSlide = maxSlide;
+     } else {
+         curSlide--;
+     }
+
+     // Di chuyển tất cả các slide
+     slides.forEach((slide, indx) => {
+         slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+     });
+     });
+
+  </script>
+   <script>
+const musicCircle = document.getElementById("musicCircle");
+const audio = document.getElementById("audio");
+const videoIframe = document.getElementById("video");
+
+// Thêm sự kiện khi nhấn vào vòng tròn
+musicCircle.addEventListener("click", toggleMusic);
+
+// Hàm điều khiển việc phát hoặc tạm dừng nhạc
+function toggleMusic() {
+    if (audio.paused) {
+        audio.play(); // Phát nhạc
+        musicCircle.classList.add("spin"); // Bắt đầu xoay
+    } else {
+        audio.pause(); // Dừng nhạc
+        musicCircle.classList.remove("spin"); // Dừng xoay
+    }
+}
+
+</script>
+</body>
+</html>

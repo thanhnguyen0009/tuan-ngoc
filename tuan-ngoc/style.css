@@ -1,0 +1,1621 @@
+@font-face {
+    font-family: 'MTD Doppelganger Display';
+    src: url('./fonts/MTDDoppelgangerDisplay.woff2') format('woff2'),
+        url('./fonts/MTDDoppelgangerDisplay.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SVN-Gotham';
+    src: url('./fonts/SVN-GothamBlack.woff2') format('woff2'),
+        url('./fonts/SVN-GothamBlack.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SVN-Gotham';
+    src: url('./fonts/SVN-Gotham.woff2') format('woff2'),
+        url('./fonts/SVN-Gotham.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SVN-Gotham Ultra';
+    src: url('./fonts/SVN-GothamUltra.woff2') format('woff2'),
+        url('./fonts/SVN-GothamUltra.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SVN-Gotham Book';
+    src: url('./fonts/SVN-GothamBook.woff2') format('woff2'),
+        url('./fonts/SVN-GothamBook.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SVN-Gotham';
+    src: url('./fonts/SVN-GothamLight.woff2') format('woff2'),
+        url('./fonts/SVN-GothamLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SVN-Gotham';
+    src: url('./fonts/SVN-GothamThin.woff2') format('woff2'),
+        url('./fonts/SVN-GothamThin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SVN-Gotham';
+    src: url('./fonts/SVN-GothamBlackItalic.woff2') format('woff2'),
+        url('./fonts/SVN-GothamBlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SVN-Gotham';
+    src: url('./fonts/SVN-GothamLight.woff2') format('woff2'),
+        url('./fonts/SVN-GothamLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SVN-Gotham Book';
+    src: url('./fonts/SVN-GothamBookItalic.woff2') format('woff2'),
+        url('./fonts/SVN-GothamBookItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SVN-Gotham';
+    src: url('./fonts/SVN-GothamBold.woff2') format('woff2'),
+        url('./fonts/SVN-GothamBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SVN-Gotham';
+    src: url('./fonts/SVN-GothamThinItalic.woff2') format('woff2'),
+        url('./fonts/SVN-GothamThinItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SVN-Gotham';
+    src: url('./fonts/SVN-GothamBold.woff2') format('woff2'),
+        url('./fonts/SVN-GothamBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SVN-Gotham';
+    src: url('./fonts/SVN-GothamItalic.woff2') format('woff2'),
+        url('./fonts/SVN-GothamItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SVN-Gotham';
+    src: url('./fonts/SVN-GothamBoldItalic.woff2') format('woff2'),
+        url('./fonts/SVN-GothamBoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SVN-Gotham Ultra';
+    src: url('./fonts/SVN-GothamUltraItalic.woff2') format('woff2'),
+        url('./fonts/SVN-GothamUltraItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SVN-Gotham';
+    src: url('./fonts/SVN-GothamLightItalic.woff2') format('woff2'),
+        url('./fonts/SVN-GothamLightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SVN-Gotham XLight';
+    src: url('./fonts/SVN-GothamXLight.woff2') format('woff2'),
+        url('./fonts/SVN-GothamXLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SVN-Gotham XLight';
+    src: url('./fonts/SVN-GothamXLightItalic.woff2') format('woff2'),
+        url('./fonts/SVN-GothamXLightItalic.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SVN-Gotham';
+    src: url('./fonts/SVN-GothamLightItalic.woff2') format('woff2'),
+        url('./fonts/SVN-GothamLightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MTD Portrait Script Bounce';
+    src: url('./fonts/MTDPortraitScriptBounce.woff2') format('woff2'),
+        url('./fonts/MTDPortraitScriptBounce.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: '1FTV VIP Hertine';
+    src: url('./fonts/1FTVVIPHertine.woff2') format('woff2'),
+        url('./fonts/1FTVVIPHertine.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
+
+
+
+
+:root{
+    --font-gotham: 'SVN-Gotham';
+    --font-dopple: 'MTD Doppelganger Display';
+    --font-portrait: 'MTD Portrait Script Bounce';
+    --font-ftv: '1FTV VIP Hertine';
+    --primary-color: #BD6944;
+    --color-text: #756C59;
+    --color-text2: #9A9691;
+}
+
+
+
+/* Hiệu ứng fade-down */
+.box-info2, .box-info4, .lb3-p3 {
+    transform: translateY(-50px);
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.5s;
+  }
+  
+  .box-info2.visible, .box-info4.visible, .lb3-p3.visible{
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  /* Hiệu ứng fade-up */
+  .box-info3, .lb-time1, .lb-time2, .lb-time3,.lb-time33, .lb-time4, .lb-sub,  .in-fe, .container-check, .inp-ten, .lb-text, #loi-chuc{
+    transform: translateY(50px);
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.5s;
+  }
+  
+  .box-info3.visible, .lb-time1.visible, .lb-time2.visible, .lb-time3.visible, .lb-sub.visible, .lb-time33.visible, .lb-time4.visible, .in-fe.visible, .container-check.visible, .inp-ten.visible, .lb-text.visible, #loi-chuc.visible{
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  /* Hiệu ứng fade-right */
+  .info2{
+    transform: translateX(-50px);
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.5s;
+  }
+  
+  .info2.visible{
+    transform: translateX(0);
+    opacity: 1;
+  }
+  
+  /* Hiệu ứng fade-left */
+  .info1{
+    transform: translateX(50px);
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.5s;
+  }
+  
+  .info1.visible{
+    transform: translateX(0);
+    opacity: 1;
+  }
+  
+  /* Hiệu ứng zoom-in */
+  .img-timeline, .img-maps, .til1, .til2, .img-time, .box-album2, .xacnhan{
+    transform: scale(0.5);
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.5s;
+  }
+  
+  .img-timeline.visible, .img-maps.visible, .til1.visible, .til2.visible, .img-time.visible, .box-album2.visible, .xacnhan.visible {
+    transform: scale(1);
+    opacity: 1;
+  }
+  
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Loading screen container */
+.loading-container {
+	display: none;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 1000;
+}
+
+/* Spinner animation */
+.spinner {
+	border: 6px solid rgba(255, 255, 255, 0.3);
+	border-top: 6px solid #fff;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	animation: spin 1s linear infinite;
+}
+
+/* Spinner animation keyframes */
+@keyframes spin {
+	0% {
+			transform: rotate(0deg);
+	}
+	100% {
+			transform: rotate(360deg);
+	}
+}
+
+.custom-popup {
+	font-family: var(--font-gotham);
+}
+
+.custom-title {
+	font-weight: bold;
+}
+
+.custom-confirm-button {
+	text-align: center;
+	display: inline-block;
+	border: 2px solid #111;
+	padding: 10px 20px !important;
+	margin: 5px 20px !important;
+	border-radius: 20px !important;
+	font-style: normal;
+	background-color: transparent;
+	color: #111;
+
+	font-size: 13px;
+	font-weight: 400;
+
+	text-transform: uppercase;
+	font-weight: bold;
+}
+/* Spinner animation */
+.spinner {
+	border: 6px solid rgba(255, 255, 255, 0.3);
+	border-top: 6px solid #fff;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	animation: spin 1s linear infinite;
+}
+
+
+.turn-top {
+    position: fixed; /* Đảm bảo box-circle luôn cố định trên màn hình */
+    bottom: 20px; /* Đẩy box-circle xuống một chút từ trên cùng */
+    right: 20px; /* Căn box-circle về phía bên phải */
+    z-index: 9999; /* Đảm bảo box-circle nằm trên các phần tử khác */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+.turn{
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden; /* Đảm bảo hình ảnh không bị tràn ra ngoài */
+    transition: transform 0.5s ease; /* Chuyển động mượt mà */
+    z-index: 2;
+  }
+  
+  /* Khi hình tròn được hover */
+  .turn:hover {
+    transform: scale(1.1); /* Tăng kích thước hình tròn khi hover */
+  }
+  
+  /* Hình ảnh bên trong hình tròn */
+  .turn-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+  }
+
+
+.container{
+    width: 480px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 1px solid #111;
+    color: var(--primary-color);
+}
+
+.container-wrapper{
+    width: 100%;
+}
+
+#box-top{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-text);
+}
+
+.box-frame{
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./anh/hoa-03.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 30px;
+    color: var(--color-text);
+    padding: 130px 70px;
+}
+
+.img-save{
+    width: 50%;
+    height: auto;
+    margin-top: -10px;
+}
+
+.lb-top{
+    font-family: var(--font-dopple);
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 30px;
+    letter-spacing: 3px;
+}
+
+.lb-top2{
+    font-family: var(--font-gotham);
+    font-size: .7em;
+    font-weight: 400;
+}
+
+
+.dau{
+    font-family: var(--font-gotham);
+    font-size: 5em;
+}
+.giua{
+    font-family: var(--font-gotham);
+    font-size: .7em;
+    margin: -20px 0 0 0;
+    font-style: italic;
+    line-height: 20px;
+    word-spacing: 1px;
+}
+.giua2{
+    font-family: var(--font-gotham);
+    font-size: .7em;
+    color: var(--color-text2);
+    margin: 15px 0 0 0;
+    font-style: italic;
+    line-height: 20px;
+    word-spacing: 1px;
+}
+
+.box-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+
+}
+
+.btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-gotham);
+    font-size: .6em;
+    text-decoration: none;
+    border: 2px solid var(--color-text);
+    color: var(--color-text);
+    border-radius: 20px;
+    margin: 0 7px;
+    padding: 4px 5px 6px;
+}
+.sub{
+    font-style: italic;
+    color: var(--color-text2);
+}
+
+.sub3{
+    font-style: italic;
+    color: var(--color-text2);
+}
+
+.btn:hover{
+    background-color: var(--color-text);
+    color: #fff;
+}
+
+#anh-cuoi{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    background-image: url('./anh/backp1-03.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.lb-anh1{
+    font-family: var(--font-portrait);
+    font-size: 1.8em;
+    margin: 50px 10px 50px 10px;
+    line-height: 25px;
+    text-align: right;
+    padding-right: 50px;
+}
+.sub2{
+    font-family: var(--font-gotham);
+    font-size: .4em;
+    margin-top: -20px;
+    color: var(--color-text2);
+    font-style: italic;
+}
+
+.box-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info1, .info2{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.img-info{
+    width: 70%;
+}
+
+.lb-info1{
+    font-family: var(--font-portrait);
+    font-size: 1.7em;
+    margin-top: 20px;
+}
+
+hr{
+    width: 60%;
+    border: 1px solid var(--primary-color);
+    margin: 10px 0;
+}
+
+.box-icon{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.img-icon{
+    width: 20px;
+}
+
+.lb-info2{
+    font-family: var(--font-gotham);
+    font-size: .55em;
+    margin-top: 10px;
+    color: var(--color-text);
+    text-align: center;
+}
+
+.lb-info22{
+    font-family: var(--font-gotham);
+    font-size: .5em;
+    margin-top: 10px;
+    color: var(--color-text);
+    text-align: center;
+    font-style: italic;
+}
+
+.box-info2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 100px 0 100px 30px;
+}
+
+.lb-info3{
+    font-family: var(--font-gotham);
+    font-size: .6em;
+    margin-top: 10px;
+    color: var(--color-text);
+    text-align: left;
+    letter-spacing: 1px;
+    
+}
+
+.sub4{
+    font-style: italic;
+    color: var(--color-text2);
+    font-size: .7em;
+}
+
+.lb-info4{
+    font-family: var(--font-portrait);
+    font-size: 1.5em;
+    margin-top: 10px;
+    color: var(--primary-color);
+    text-align: left;
+    margin-top: 20px;
+    line-height: 30px;
+    text-align: left;
+}
+.lb-info4{
+    font-family: var(--font-portrait);
+    font-size: 1.8em;
+    margin-top: 10px;
+    color: var(--primary-color);
+    text-align: left;
+    margin-top: 20px;
+    line-height: 50px;
+    text-align: left;
+}
+
+
+.sub5{
+    font-family: var(--font-gotham);
+    font-size: .9em;
+    text-transform: uppercase;
+    /* margin-top: 10px; */
+    color: var(--color-text);
+    lịne-height: 15px;
+}
+
+.lb-info5{
+    text-transform: uppercase;
+    font-family: var(--font-gotham);
+    font-size: .55em;
+    color: var(--color-text2);
+    font-style: italic;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+
+.box-info3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 0 30px 0;
+}
+
+.lb-info6{
+    font-family: var(--font-gotham);
+    font-size: .6em;
+    margin-top: 10px;
+    color: var(--color-text);
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    text-align: right;
+}
+
+.sub6{
+    color: var(--color-text2);
+    font-style: italic;
+    font-size: .8em;
+    letter-spacing: 0;
+}
+
+.lb-info7{
+    font-family: var(--font-gotham);
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-top: 40px;
+    color: var(--primary-color);
+    letter-spacing: 2px;
+    word-spacing: 1px;
+    text-align: right;
+}
+
+.lb-info77{
+    font-family: var(--font-gotham);
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-top: 40px;
+    color: var(--primary-color);
+    letter-spacing: 2px;
+    word-spacing: 1px;
+    text-align: right;
+}
+
+.sub7{
+    color: var(--color-text2);
+    font-style: italic;
+    font-size: .5em;
+    text-transform: uppercase;
+    letter-spacing: 0;
+}
+
+.lb-info8{
+    font-family: var(--font-gotham);
+    font-size: .6em;
+    margin-top: 10px;
+    color: var(--color-text);
+    text-align: right;
+    letter-spacing: 1px;
+    font-style: italic;
+}
+
+.sub8{
+    font-style: italic;
+    color: var(--color-text2);
+    font-size: .7em;
+    letter-spacing: 0;
+}
+
+
+.box-info4{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 100px 0 30px 30px;
+}
+
+.lb-info9{
+    font-family: var(--font-gotham);
+    font-size: .6em;
+    margin-top: 10px;
+    color: var(--color-text);
+    text-align: left;
+    letter-spacing: 1px;
+    
+}
+
+.sub9{
+    font-style: italic;
+    color: var(--color-text2);
+    font-size: .8em;
+}
+
+.lb-info10{
+    font-family: var(--font-gotham);
+    font-size: 1em;
+    font-weight: 600;
+    margin: 20px 0;
+    color: var(--primary-color);
+    word-spacing: 1px;
+    text-align: left;
+}
+
+.lb-info100{
+    font-family: var(--font-gotham);
+    font-size: 1em;
+    font-weight: 600;
+    margin: 20px 0 0;
+    color: var(--primary-color);
+    word-spacing: 1px;
+    text-align: left;
+}
+
+.sub10{
+    font-style: italic;
+    color: var(--color-text2);
+    font-size: .6em;
+}
+
+.lb-info11{
+    font-family: var(--font-gotham);
+    font-size: .55em;
+    margin-top: 5px;
+    color: var(--color-text);
+    text-align: center;
+    letter-spacing: 1px;
+    font-style: italic;
+}
+
+
+#thoigian-diadiem{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    background-image: url('./anh/back.png');
+}
+
+.lb-time1{
+    font-family: var(--font-gotham);
+    font-size: .6em;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin-top: 20px;
+    color: var(--color-text);
+    text-align: center;
+    line-height: 20px;
+}
+
+.sub11{
+    font-style: italic;
+    color: var(--color-text2);
+    font-size: .8em;
+}
+
+.img-time1{
+    width: 25%;
+    margin-top: 50px;
+}
+
+.lb-time2{
+    font-family: var(--font-portrait);
+    font-size: 2em;
+    margin-top: 30px;
+}
+
+.lb-time3{
+    font-family: var(--font-gotham);
+    font-size: .6em;
+    margin-top: 10px;
+    color: var(--color-text);
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 15px;
+}
+.lb-time33{
+    font-family: var(--font-gotham);
+    font-size: .55em;
+    margin-top: 3px;
+    color: var(--color-text);
+    text-align: center;
+    letter-spacing: 1px;
+    font-style: italic;
+}
+
+.lb-sub{
+    font-family: var(--font-gotham);
+    color: var(--color-text2);
+    font-size: .5em;
+    text-transform: uppercase;
+    text-align: center;
+    font-style: italic;
+    margin: 20px 0;
+}
+
+.btn-time{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-gotham);
+    font-size: .6em;
+    font-weight: 300;
+    text-decoration: none;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 5px 120px;
+}
+
+.btn-time:hover{
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.img-time2{
+    width: 7%;
+    margin-top: 50px;
+}
+
+.lb-time4{
+    font-family: var(--font-ftv);
+    font-size: 1.6em;
+    margin-top: 30px;
+    color: var(--primary-color);
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 20px;
+}
+
+.sub12{
+    font-style: italic;
+    color: var(--color-text2);
+    font-size: .4em;
+    font-family: var(--font-gotham);
+}
+
+.lb-time5{
+    font-family: var(--font-gotham);
+    font-size: .9em;
+    margin-top: 20px;
+    color: var(--color-text);
+    letter-spacing: 3px;
+    text-align: center;
+    line-height: 15px;
+}
+
+.sub13{
+    font-style: italic;
+    color: var(--color-text2);
+    font-size: .6em;
+    letter-spacing: 0;
+}
+
+.img-time3{
+    width: 80%;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+.img-time333{
+    width: 100%;
+}
+
+.lb-time6{
+    font-family: var(--font-gotham);
+    font-size: .65em;
+    font-weight: 300;
+    margin: 50px 0 10px;
+    text-align: center;
+}
+
+.sub14{
+    font-style: italic;
+    color: var(--color-text2);
+    font-size: .65em;
+    font-family: var(--font-gotham);
+    font-weight: 400;
+}
+
+.black{
+    color: var(--color-text);
+}
+
+.red{
+    font-weight: 00;
+}
+
+.lb-time7{
+    font-family: var(--font-gotham);
+    font-size: 1.3em;
+    font-weight: 600;
+    margin-top: 25px;
+    color: var(--primary-color);
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 15px;
+}
+ .sub15{
+    font-style: italic;
+    color: var(--color-text2);
+    font-size: .4em;
+    font-family: var(--font-gotham);
+ }
+
+.lb-time8{
+    font-family: var(--font-gotham);
+    font-size: .55em;
+    margin-top: 25px;
+    color: var(--color-text);
+    text-align: center;
+    letter-spacing: 1px;
+    font-style: italic;
+}
+
+.img-time5{
+    width: 100%;
+}
+
+
+
+/* ===========COUNTDOWN========= */
+.container-count {
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  
+  li {
+    display: inline-block;
+    list-style-type: none;
+    font-size: .6em;
+    padding: 1em;
+    font-family: var(--font-gotham);
+    color: var(--color-text);
+    margin: 30px 10px
+  }
+  
+  li:first-child {
+    margin-left: 0; /* Bỏ margin trái của li đầu tiên */
+  }
+  
+  li:last-child {
+    margin-right: 0; /* Bỏ margin phải của li cuối cùng */
+  }
+  
+  li span {
+    display: block;
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--primary-color);
+  }
+
+
+/* ====FORM+============== */
+
+#xac-nhan{
+    background-image: url('./anh/backp4-03.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+form{
+    color: var(--primary-color);
+}
+.feed-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.lb-thamdu{
+    font-family: var(--font-portrait);
+    font-size: 2.5em;
+    margin-top: 50px;
+    line-height: 30px;
+}
+
+.sub16{
+    font-style: italic;
+    color: var(--color-text2);
+    font-size: .4em;
+    font-family: var(--font-gotham);
+}
+
+.img-form{
+    width: 6%;
+    margin-top: 20px;
+}
+
+.in-fe{
+    font-family: var(--font-gotham);
+    font-size: .6em;
+    font-weight: 400;
+    line-height: 18px;
+    word-spacing: 1px;
+    margin-top: 30px;
+}
+
+.in-fe2{
+    font-family: var(--font-gotham);
+    font-size: .5em;
+    font-style: italic;
+    color: var(--color-text2);
+    margin: 10px 0 10px;
+}
+
+.hr-form{
+    width: 100%;
+    border: 1px solid var(--primary-color);
+    margin: 10px 0;
+}
+
+.lb{
+    font-family: var(--font-gotham);
+    font-size: .6em;
+    color: var(--color-text);
+    margin: 20px 0 10px;
+    text-align: center;
+    line-height: 10px;
+}
+
+.sub-til{
+    font-style: italic;
+    color: var(--color-text2);
+    font-size: .8em;
+    font-family: var(--font-gotham);
+}
+
+[type="radio"] {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: auto;
+    margin: 0;
+    /* overflow: hidden; */
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    /* white-space: nowrap; */
+    }
+
+.container-check {
+    margin-top: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    font-family: var(--font-lora);
+    font-weight: 300;
+    }
+    
+  
+.box-feed:checked+label {
+    color: #fff;
+    background-color: black;
+    }
+    
+.box-feed{
+  border-radius: 20px;
+  width: 100px;
+}
+    
+.box-check{
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-lora);
+  border-radius: 20px;
+  /*margin: 0 15px;*/
+}
+
+.box-feed:checked+label {
+color: #fff;
+background-color: var(--primary-color);
+}
+
+.box-feed{
+border-radius: 20px;
+}
+
+.box-label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lb-text{
+    font-family: var(--font-lora);
+    font-size: .7em;
+    margin: 20px 0 5px;
+}
+
+.til-check{
+  /* margin: 0 auto; */
+  font-style: normal;
+  font-size: .6em;
+  font-weight: 400;
+  font-family: var(--font-gotham);
+  }
+  
+
+.check-box {
+  width: 160px;
+  text-align: center;
+display: inline-block;
+border: 2px solid var(--primary-color);
+padding: 6px 10px 7px;
+margin: 5px 20px;
+border-radius: 20px;
+font-style: normal;
+background-color: #fff;
+}
+.box-feed:checked+label {
+color: #fff;
+background-color: var(--primary-color);
+}
+.check-box:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+  .box-ten{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    font-family: var(--font-lora);
+    margin: 10px 0 0;
+    }
+    
+    #inp-ten{
+    width: 350px;
+    height: 50px;
+    text-align: left;
+    border-radius: 20px;
+    border: 2px solid var(--primary-color);
+    font-size: 13px;
+    font-weight: 300;
+    padding: 5px 10px;
+    margin: 5px 0;
+    }
+
+    .inp-ten{
+        width: 350px;
+        height: 30px;
+        text-align: left;
+        border-radius: 20px;
+        border: 2px solid var(--primary-color);
+        font-size: 13px;
+        font-weight: 300;
+        padding: 5px 10px;
+        margin: 5px 0;
+        }
+
+    ::placeholder {
+        white-space: pre-line;
+      }
+
+    textarea {
+        width: 70%;
+        padding: 10px;
+        font-size: .75em;
+        border: 2px solid var(--primary-color);
+        border-radius: 20px;
+        resize: vertical; /* Cho phép thay đổi chiều cao */
+    }
+    
+
+    input, textarea {
+        font-family: var(--font-gotham);
+        font-weight: 300;
+        font-size: .6em;
+        font-style: italic;
+    }
+    
+    input::placeholder, textarea::placeholder {
+        font-family: var(--font-gotham);
+        font-weight: 300;
+        font-size: .6em;
+        font-style: italic;
+    }
+#loi-chuc{
+    font-family: var(--font-gotham);
+    font-weight: lighter;
+    font-size: .8em;
+}
+
+    
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+.xacnhan{
+    height: 30px;
+    font-size: .65em;
+    background: var(--primary-color);
+    color: #fff;
+    margin: 50px 100px;
+    border-radius: 20px;
+    border: 1px solid var(--primary-color);
+    cursor: pointer;
+    width: 150px;
+    font-weight: 300;
+    font-family: var(--font-gotham);
+}
+    
+    .xacnhan:hover{
+    background: #fff;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+#mung-cuoi{
+    background-image: url('./anh/back-p5-03.png');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.img-end1{
+    width: 20%;
+    margin-top: 100px;
+}
+
+.lb-endd1{
+    font-family: var(--font-gotham);
+    font-size: .6em;
+    letter-spacing: .5px;
+    font-weight: 400;
+    color: var(--color-text);
+    margin-top: 50px;
+}
+
+.sub-end1{
+    font-family: var(--font-gotham);
+    font-size: .8em;
+    letter-spacing: .5px;
+    color: var(--color-text2);
+    font-style: italic;
+}
+.lb-endd2{
+    font-family: var(--font-gotham);
+    font-size: 9px;
+    letter-spacing: .5px;
+    font-weight: 300;
+    text-transform: uppercase;
+    line-height: 15px;
+    margin-bottom: 20px;
+}
+
+.lb-end3{
+    font-family: var(--font-gotham);
+    font-size: .5em;
+    margin-top: 20px;
+    color: var(--color-text2);
+    text-align: center;
+    line-height: 15px;
+    font-style: italic;
+}
+
+.img-qr{
+    width: 30%;
+    margin-top: 50px;
+}
+
+
+
+.thank{
+    font-family: var(--font-portrait);
+    font-size: 2.5em;
+    color: var(--color-text);
+    margin-top: 50px;
+}
+
+.lb-end1{
+    font-family: var(--font-gotham);
+    font-size: .6em;
+    letter-spacing: .5px;
+    font-weight: 400;
+    color: var(--color-text);
+    margin-top: 10px;
+    font-style: italic;
+    line-height: 20px;
+}
+
+.lb-end2{
+    font-family: var(--font-gotham);
+    font-size: .6em;
+    letter-spacing: .5px;
+    font-weight: 400;
+    color: var(--color-text);
+    margin-top: 30px;
+    font-style: italic;
+    line-height: 20px;
+}
+
+.lb-end{
+    font-family: var(--font-gotham);
+    font-size: .55em;
+    color: var(--color-text);
+    margin: 70px 0 160px;
+}
+
+.red{
+    color: var(--primary-color);
+}
+
+
+/* Đảm bảo box-circle luôn cố định và không ảnh hưởng đến nội dung trang */
+.box-circle {
+    position: fixed; /* Đảm bảo box-circle luôn cố định trên màn hình */
+    top: 20px; /* Đẩy box-circle xuống một chút từ trên cùng */
+    right: 20px; /* Căn box-circle về phía bên phải */
+    z-index: 9999; /* Đảm bảo box-circle nằm trên các phần tử khác */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .lb-circle {
+    margin-top: 10px;
+    font-size: 10px;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: color 0.3s ease;
+    font-family: var(--font-lora);
+    text-align: center;
+    line-height: 10px;
+  }
+  
+  /* Thêm hiệu ứng hover cho label */
+  .lb-circle:hover {
+    color: #3498db;
+  }
+  
+  .circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); */
+    overflow: hidden; /* Đảm bảo hình ảnh không bị tràn ra ngoài */
+    transition: transform 0.5s ease; /* Chuyển động mượt mà */
+    z-index: 2;
+  }
+  
+  /* Khi hình tròn được hover */
+  .circle:hover {
+    transform: scale(1.1); /* Tăng kích thước hình tròn khi hover */
+    /* box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); */
+  }
+  
+  /* Hình ảnh bên trong hình tròn */
+  .circle-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+  }
+  
+  /* Hiệu ứng xoay liên tục */
+  .circle.spin {
+    animation: spin 1s linear infinite; /* Xoay liên tục */
+  }
+  
+  /* Định nghĩa hoạt ảnh xoay */
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .box-back{
+    background-image: url('../chien-diem/fonts/./anh/back-02.png');
+    padding-bottom: 50px;
+  }
+
+
+/* ==================MODAL==================== */
+
+/* Open Modal Button */
+.open-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+  /* Modal Overlay Styles */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: none; /* Hidden by default */
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Modal Content Styles */
+  .modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    animation: slideDown 0.4s ease-out;
+    font-family: var(--font-piyon);
+    font-size: 1.5em;
+  }
+  h2{
+    font-family: var(--font-gotham);
+    font-size: .7em;
+    margin-bottom: 20px;
+  }
+  .noi-dung{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-gotham);
+    color: var(--color-text);
+  }
+  .copy{
+    margin-left: 10px;
+    font-family: var(--font-gotham);
+    padding: 2px 2px 4px;
+    border-radius: 10px;
+  }
+  .img-modal{
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .closeModal{
+    padding: 3px 5px;
+    border-radius: 5px;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    font-size: .7em;
+    margin-top: 10px;
+  }
+  
+  /* Slide Down Animation */
+  @keyframes slideDown {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+
+/* ================================ */
+
+@media (max-width: 480px){
+    .container {
+        width: 100%;
+    }
+    .box-image{
+        margin-left: -15px;
+        
+    }
+    .imge{
+        width: 40%;
+    }
+    .in-fe{
+        font-size: .5em;
+    }
+    .lb-line1, .lb-name{
+        font-size: 2.7em;
+    }
+    .kinhmoi{
+        font-size: .6em;
+    }
+    textarea {
+        width: 90%;
+        padding: 10px;
+        font-size: .75em;
+    }
+    .lb-endd1{
+        font-size: 8px;
+    }
+    .lb-endd2{
+        font-size: 7.5px;
+    }
+    .btn{
+        font-size: .4em;
+        margin: 0 3px;
+    }
+    .box-frame{
+        padding: 90px 70px;
+    }
+    .lb-top{
+        font-size: 1.4em;
+    }
+    .lb-info8{
+        font-size: .4em;
+    }
+    .lb-time1{
+        font-size: .5em;
+    }
+    .lb-time2{
+        font-size: 2em;
+    }
+    .lb-time4{
+        font-size: 1.4em;
+    }
+    .lb-time7{
+        font-size: 1.1em;
+    }
+    li span{
+        font-size: 2.5rem;
+    }
+    .lb-end1, .lb-end2{
+        font-size: .5em;
+    }
+    .lb-anh1{
+        padding-right: 20px;
+    }
+  }
+  
