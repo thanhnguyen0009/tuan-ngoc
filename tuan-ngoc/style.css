@@ -1528,6 +1528,7 @@ background-color: var(--primary-color);
     display: none; /* Hidden by default */
     align-items: center;
     justify-content: center;
+    z-index: 999;
   }
   
   /* Modal Content Styles */
@@ -1571,6 +1572,10 @@ background-color: var(--primary-color);
     margin-top: 10px;
   }
 
+  .img-zl{
+    width: 100%;
+  }
+
   .closeModal{
     padding: 3px 5px;
     border-radius: 5px;
@@ -1578,6 +1583,7 @@ background-color: var(--primary-color);
     color: var(--primary-color);
     font-size: .7em;
     margin-top: 10px;
+    cursor: pointer;
   }
   
   /* Slide Down Animation */
