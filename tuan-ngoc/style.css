@@ -219,62 +219,61 @@
 .box-info2, .box-info4, .lb3-p3 {
     transform: translateY(-50px);
     opacity: 0;
-    transition: transform 0.5s, opacity 0.5s;
-  }
-  
-  .box-info2.visible, .box-info4.visible, .lb3-p3.visible{
+    transition: transform 1s, opacity 1s; /* Tăng từ 0.5s lên 1s */
+}
+
+.box-info2.visible, .box-info4.visible, .lb3-p3.visible {
     transform: translateY(0);
     opacity: 1;
-  }
-  
-  /* Hiệu ứng fade-up */
-  .box-info3, .lb-time1, .lb-time2, .lb-time3,.lb-time33, .lb-time4, .lb-sub,  .in-fe, .container-check, .inp-ten, .lb-text, #loi-chuc{
+}
+
+/* Hiệu ứng fade-up */
+.box-info3, .lb-time1, .lb-time2, .lb-time3, .lb-time33, .lb-time4, .lb-sub, .in-fe, .container-check, .inp-ten, .lb-text, #loi-chuc {
     transform: translateY(50px);
     opacity: 0;
-    transition: transform 0.5s, opacity 0.5s;
-  }
-  
-  .box-info3.visible, .lb-time1.visible, .lb-time2.visible, .lb-time3.visible, .lb-sub.visible, .lb-time33.visible, .lb-time4.visible, .in-fe.visible, .container-check.visible, .inp-ten.visible, .lb-text.visible, #loi-chuc.visible{
+    transition: transform 1s, opacity 1s; /* Tăng từ 0.5s lên 1s */
+}
+
+.box-info3.visible, .lb-time1.visible, .lb-time2.visible, .lb-time3.visible, .lb-sub.visible, .lb-time33.visible, .lb-time4.visible, .in-fe.visible, .container-check.visible, .inp-ten.visible, .lb-text.visible, #loi-chuc.visible {
     transform: translateY(0);
     opacity: 1;
-  }
-  
-  /* Hiệu ứng fade-right */
-  .info2{
+}
+
+/* Hiệu ứng fade-right */
+.info2 {
     transform: translateX(-50px);
     opacity: 0;
-    transition: transform 0.5s, opacity 0.5s;
-  }
-  
-  .info2.visible{
+    transition: transform 1s, opacity 1s; /* Tăng từ 0.5s lên 1s */
+}
+
+.info2.visible {
     transform: translateX(0);
     opacity: 1;
-  }
-  
-  /* Hiệu ứng fade-left */
-  .info1{
+}
+
+/* Hiệu ứng fade-left */
+.info1 {
     transform: translateX(50px);
     opacity: 0;
-    transition: transform 0.5s, opacity 0.5s;
-  }
-  
-  .info1.visible{
+    transition: transform 1s, opacity 1s; /* Tăng từ 0.5s lên 1s */
+}
+
+.info1.visible {
     transform: translateX(0);
     opacity: 1;
-  }
-  
-  /* Hiệu ứng zoom-in */
-  .img-timeline, .img-maps, .til1, .til2, .img-time, .box-album2, .xacnhan{
+}
+
+/* Hiệu ứng zoom-in */
+.img-timeline, .img-maps, .til1, .til2, .img-time, .box-album2, .xacnhan {
     transform: scale(0.5);
     opacity: 0;
-    transition: transform 0.5s, opacity 0.5s;
-  }
-  
-  .img-timeline.visible, .img-maps.visible, .til1.visible, .til2.visible, .img-time.visible, .box-album2.visible, .xacnhan.visible {
+    transition: transform 1s, opacity 1s; /* Tăng từ 0.5s lên 1s */
+}
+
+.img-timeline.visible, .img-maps.visible, .til1.visible, .til2.visible, .img-time.visible, .box-album2.visible, .xacnhan.visible {
     transform: scale(1);
     opacity: 1;
-  }
-  
+}
 
 
 
@@ -485,7 +484,7 @@
 
 }
 
-.btn{
+.btn {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -498,6 +497,17 @@
     border-radius: 20px;
     margin: 0 7px;
     padding: 4px 5px 6px;
+    animation: bubbleEffect 1.2s infinite ease-in-out; /* Thêm hiệu ứng bong bóng */
+}
+
+/* Keyframes cho hiệu ứng zoom in-out */
+@keyframes bubbleEffect {
+    0%, 100% {
+        transform: scale(1); /* Kích thước ban đầu */
+    }
+    50% {
+        transform: scale(1.1); /* Phóng to nhẹ để phù hợp với nút */
+    }
 }
 .sub{
     font-style: italic;
@@ -581,8 +591,19 @@ hr{
     gap: 20px;
 }
 
-.img-icon{
+.img-icon {
     width: 20px;
+    animation: bubbleEffect 1s infinite ease-in-out; /* Thêm hiệu ứng bong bóng */
+}
+
+/* Keyframes cho hiệu ứng zoom in-out */
+@keyframes bubbleEffect {
+    0%, 100% {
+        transform: scale(1); /* Kích thước ban đầu */
+    }
+    50% {
+        transform: scale(1.2); /* Phóng to nhẹ, phù hợp với icon nhỏ */
+    }
 }
 
 .lb-info2{
@@ -608,6 +629,7 @@ hr{
     justify-content: center;
     align-items: flex-start;
     margin: 100px 0 100px 30px;
+    z-index: 1;
 }
 
 .lb-info3{
@@ -868,7 +890,8 @@ hr{
     margin: 20px 0;
 }
 
-.btn-time{
+/* CSS cho nút */
+.btn-time {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -881,11 +904,24 @@ hr{
     border-radius: 20px;
     margin-top: 20px;
     padding: 5px 120px;
+    animation: bubbleEffect 1s infinite ease-in-out; /* Thêm hiệu ứng bong bóng */
+    transition: background-color 0.3s, color 0.3s; /* Giữ hiệu ứng hover mượt */
 }
 
-.btn-time:hover{
+/* Hiệu ứng hover */
+.btn-time:hover {
     background-color: var(--primary-color);
     color: #fff;
+}
+
+/* Keyframes cho hiệu ứng zoom in-out */
+@keyframes bubbleEffect {
+    0%, 100% {
+        transform: scale(1); /* Kích thước ban đầu */
+    }
+    50% {
+        transform: scale(1.1); /* Phóng to nhẹ để phù hợp với nút */
+    }
 }
 
 .img-time2{
@@ -1510,6 +1546,7 @@ background-color: var(--primary-color);
     animation: slideDown 0.4s ease-out;
     font-family: var(--font-piyon);
     font-size: 1.5em;
+    z-index: -1;
   }
   h2{
     font-family: var(--font-gotham);
