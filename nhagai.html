@@ -77,7 +77,7 @@
                 <div class="box-btn">
                     <a href="#xac-nhan" class="btn">XÁC NHẬN THAM DỰ</a>
                     <a href="#thoigian-diadiem" class="btn">THỜI GIAN & ĐỊA ĐIỂM</a>
-                    <!-- <a href="#anh-cuoi" class="btn">ẢNH CƯỚI</a> -->
+                    <a href="#box-slider" class="btn">ẢNH CƯỚI</a>
                     <a href="#mung-cuoi" class="btn">MỪNG CƯỚI</a>
                 </div>
             </div>
@@ -85,7 +85,7 @@
                 <label for="" class="lb-anh1">Chú Rể & Cô Dâu</label>
                 <div class="box-info">
                     <div class="info1">
-                        <!-- <img src="./tuan-ngoc/anh/anh-03.png" alt="" class="img-info"> -->
+                        <img src="./tuan-ngoc/anh/anh2.jpg" alt="" class="img-info">
                         <label for="" class="lb-info1">Kim Ngọc</label>
                         <hr>
                         <!-- BOX ICON 1 -->
@@ -106,7 +106,7 @@
                             H. Củ Chi, TP. Hồ Chí Minh</label>
                     </div>
                     <div class="info2">
-                        <!-- <img src="./tuan-ngoc/anh/anh-03.png" alt="" class="img-info"> -->
+                        <img src="./tuan-ngoc/anh/anh1.jpg" alt="" class="img-info">
                         <label for="" class="lb-info1">Minh Tuấn</label>
                         <hr>
                        <!-- BOX ICON 2 -->
@@ -254,6 +254,45 @@
             </div>
 
 
+            <div id="box-slider">
+              <!-- Slider container -->
+                <div class="slider">
+                    <div class="slide">
+                        <img src="./tuan-ngoc/anh/1.webp" alt="" />
+                    </div>
+                    <div class="slide">
+                    <img src="./tuan-ngoc/anh/2.webp" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./tuan-ngoc/anh/3.webp" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./tuan-ngoc/anh/4.webp" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./tuan-ngoc/anh/5.webp" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./tuan-ngoc/anh/6.webp" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./tuan-ngoc/anh/7.webp" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./tuan-ngoc/anh/8.webp" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./tuan-ngoc/anh/9.webp" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./tuan-ngoc/anh/10.webp" alt="" />
+                    </div>
+                
+
+                    <button class="btn-slider btn-next"><i class="fa-solid fa-caret-right"></i></button>
+                    <button class="btn-slider btn-prev"><i class="fa-solid fa-caret-left"></i></button>
+                </div>
+            </div>
 
          
             <div id="xac-nhan">
@@ -537,52 +576,62 @@ function showPopup() {
         });
 </script>
 <script>
-    "use strict";
-     // Select all slides
-     const slides = document.querySelectorAll(".slide");
+  "use strict";
 
-     // Loop through slides và thiết lập translateX cho mỗi slide
-     slides.forEach((slide, indx) => {
-     slide.style.transform = `translateX(${indx * 100}%)`;
-     });
+const slides = document.querySelectorAll(".slide");
+const slider = document.querySelector(".slider");
 
-     // Chọn nút next và prev
-     const nextSlide = document.querySelector(".btn-next");
-     const prevSlide = document.querySelector(".btn-prev");
+// Cập nhật chiều cao slider dựa trên ảnh
+function updateSliderHeight() {
+    const currentImg = slides[curSlide].querySelector("img");
+    const imgHeight = currentImg.naturalHeight * (slider.offsetWidth / currentImg.naturalWidth);
+    slider.style.height = `${imgHeight}px`;
+}
 
-     // Biến đếm số slide hiện tại và tối đa
-     let curSlide = 0;
-     let maxSlide = slides.length - 1;
+// Thiết lập translateX ban đầu
+slides.forEach((slide, indx) => {
+    slide.style.transform = `translateX(${indx * 100}%)`;
+});
 
-     // Thêm sự kiện cho nút tiếp theo
-     nextSlide.addEventListener("click", function () {
-     // Nếu hiện tại là slide cuối, quay lại đầu tiên
-     if (curSlide === maxSlide) {
-         curSlide = 0;
-     } else {
-         curSlide++;
-     }
+// Cập nhật chiều cao slider khi tải trang
+window.addEventListener("load", updateSliderHeight);
 
-     // Di chuyển tất cả các slide
-     slides.forEach((slide, indx) => {
-         slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
-     });
-     });
+// Chọn nút next và prev
+const nextSlide = document.querySelector(".btn-next");
+const prevSlide = document.querySelector(".btn-prev");
 
-     // Thêm sự kiện cho nút quay lại
-     prevSlide.addEventListener("click", function () {
-     // Nếu hiện tại là slide đầu tiên, quay lại cuối cùng
-     if (curSlide === 0) {
-         curSlide = maxSlide;
-     } else {
-         curSlide--;
-     }
+let curSlide = 0;
+let maxSlide = slides.length - 1;
 
-     // Di chuyển tất cả các slide
-     slides.forEach((slide, indx) => {
-         slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
-     });
-     });
+// Sự kiện nút next
+nextSlide.addEventListener("click", function () {
+    if (curSlide === maxSlide) {
+        curSlide = 0;
+    } else {
+        curSlide++;
+    }
+
+    slides.forEach((slide, indx) => {
+        slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+    });
+
+    updateSliderHeight(); // Cập nhật chiều cao
+});
+
+// Sự kiện nút prev
+prevSlide.addEventListener("click", function () {
+    if (curSlide === 0) {
+        curSlide = maxSlide;
+    } else {
+        curSlide--;
+    }
+
+    slides.forEach((slide, indx) => {
+        slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+    });
+
+    updateSliderHeight(); // Cập nhật chiều cao
+});
 
   </script>
    <script>
